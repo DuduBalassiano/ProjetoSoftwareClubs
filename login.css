@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.header {
+    background-color: #6fa24e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.login-section {
+    background-color: #e0e0e0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6fa24e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.find-players-section {
+    padding: 30px;
+}
+
+.find-players-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.find-players-section th, .find-players-section td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+
+.championship-section {
+    padding: 30px;
+    text-align: center;
+}
+
+.championship-card {
+    background-color: #6fa24e;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: left;
+}
+
+.championship-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.championship-card p {
+    margin: 10px 0;
+}
+
+.championship-card button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
