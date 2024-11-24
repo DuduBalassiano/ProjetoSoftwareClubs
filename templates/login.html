@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pro Clubs Finder</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+    <!--Top Bar-->
+    <header class="header">
+        <h1>PRO CLUBS FINDER</h1>
+    </header>
+
+    <!--Caixa com Form-->
+    <main class="login-section">
+        <div class="login-container">
+            <h2>Bem-vindo! Faça Login</h2>
+            <form action="{% url 'perfil' %}" method="post" class="form-login">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Digite seu email" 
+                        required 
+                        aria-label="Digite seu email">
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input 
+                        type="password" 
+                        id="senha" 
+                        name="senha" 
+                        placeholder="Digite sua senha" 
+                        required 
+                        aria-label="Digite sua senha">
+                </div>
+
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+            <!-- Exibe mensagens de sucesso ou erro -->
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li class="{{ message.tags }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <div class="options">
+                <p>Não tem uma conta? <a href="{% url 'cadastro' %}" class="link-cadastro">Cadastre-se</a></p>
+            </div>
+        </div>
+    </main>
+
+
+    <!--Rodapé da Aplicação-->
+    <footer class="footer">
+        <p>&copy; 2024 Pro Clubs Finder. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="#">Sua Empresa</a></p>
+    </footer>
+
+</body>
+</html>

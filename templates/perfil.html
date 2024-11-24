@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Pro Clubs Finder</title>
+    <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+</head>
+<body>
+    <header class="header">
+        <h1>PRO CLUBS FINDER</h1>
+    </header>
+    
+    <section class="find-players-section">
+        <h2>Encontre o seu jogador</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Overall</th>
+                    <th>Level</th>
+                    <th>Posição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João</td>
+                    <td>87</td>
+                    <td>50</td>
+                    <td>Atacante</td>
+                </tr>
+                <tr>
+                    <td>Maria</td>
+                    <td>85</td>
+                    <td>45</td>
+                    <td>Meio-campo</td>
+                </tr>
+                <tr>
+                    <td>Pedro</td>
+                    <td>82</td>
+                    <td>48</td>
+                    <td>Defensor</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="championship-section">
+        <h2>Campeonatos</h2>
+        <div class="championship-card-container">
+            <div class="championship-card">
+                <img src="https://d3lbfr570u7hdr.cloudfront.net/stadiumastro/media/perform-article/2022/dec/19/kylian-mbappe_s4z7y7klnl521rdjwfihpt6ay.jpg" alt="Imagem do Campeonato EA Cup">
+                <p><strong>Nível:</strong> 87</p>
+                <p><strong>Vagas:</strong> 20</p>
+                <p><strong>Organizador:</strong> FC Team</p>
+                <p><strong>Data:</strong> 12/10/24</p>
+                <button>Participar</button>
+            </div>
+            <div class="championship-card">
+                <img src="https://s1.eestatic.com/2022/11/21/deportes/futbol/mundial/720188518_228877212_1706x960.jpg" alt="Imagem do Campeonato Pro League">
+                <p><strong>Nível:</strong> 80</p>
+                <p><strong>Vagas:</strong> 20</p>
+                <p><strong>Organizador:</strong> Pro Team</p>
+                <p><strong>Data:</strong> 20/11/24</p>
+                <button>Participar</button>
+            </div>
+            <div class="championship-card">
+                <img src="https://i.eurosport.com/2019/11/20/2720760-56237230-2560-1440.jpg" alt="Imagem do Campeonato Champions League">
+                <p><strong>Nível:</strong> 85</p>
+                <p><strong>Vagas:</strong> 20</p>
+                <p><strong>Organizador:</strong> FIFA League</p>
+                <p><strong>Data:</strong> 05/12/24</p>
+                <button>Participar</button>
+            </div>
+            <div class="championship-card">
+                <img src="https://jornaleconomico.sapo.pt/wp-content/themes/yootheme/cache/6f/viktor-gyokeres-6f3757d8.jpeg" alt="Imagem do Campeonato Global Series">
+                <p><strong>Nível:</strong> 80</p>
+                <p><strong>Vagas:</strong> 20</p>
+                <p><strong>Organizador:</strong> EA Sports</p>
+                <p><strong>Data:</strong> 10/01/25</p>
+                <button>Participar</button>
+            </div>
+            <div class="championship-card">
+                <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt01727e3e4a54ab39/6321f0040c7ca54c537c917f/Erling_Haaland(5).jpg" alt="Imagem do Campeonato Ultimate">
+                <p><strong>Nível:</strong> 90</p>
+                <p><strong>Vagas:</strong> 10</p>
+                <p><strong>Organizador:</strong> Global League</p>
+                <p><strong>Data:</strong> 25/01/25</p>
+                <button>Participar</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Pro Clubs Finder. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="#">Sua Empresa</a></p>
+    </footer>
+</body>
+</html>
