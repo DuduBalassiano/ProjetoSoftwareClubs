@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from .forms import PlayerForm
 
 @csrf_exempt
 def login_view(request):
@@ -47,3 +48,16 @@ def cadastro_view(request):
 
 def home(request):
     return render(request, 'home.html')
+
+   
+
+def add_player(request):
+    if request.method == 'POST':
+        form = PlayerForm(request.POST)
+        if form.is_valid():
+            form.save()  # Salva o jogador no banco de dados
+            return redirect('home')  # Redireciona para a página inicial (ou qualquer outra página)
+    else:
+        form = PlayerForm()  # Se o método for GET, apenas exibe o formulário
+
+    return render(request, 'add_player.html', {'form': form})
