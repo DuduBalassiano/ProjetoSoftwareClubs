@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import PlayerForm
+from .forms import ChampionshipForm
 
 @csrf_exempt
 def login_view(request):
@@ -61,3 +62,13 @@ def add_player(request):
         form = PlayerForm()  # Se o método for GET, apenas exibe o formulário
 
     return render(request, 'add_player.html', {'form': form})
+
+def add_championship(request):
+    if request.method == 'POST':
+        form = ChampionshipForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')  # Substitua 'home' pela URL da página inicial ou lista de campeonatos
+    else:
+        form = ChampionshipForm()
+    return render(request, 'add_championship.html', {'form': form})
