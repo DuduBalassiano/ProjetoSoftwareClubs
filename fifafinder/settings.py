@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "accounts",
+    'fifafinder',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://localhost:8000',  # Substitua pelo domínio correto
+    'http://127.0.0.1:8000',   # Adicione localhost para desenvolvimento
+]
