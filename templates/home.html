@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro Clubs Finder</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
     <header class="header">
-        <h1>PRO CLUBS FINDER</h1>
+        <h1>FIFA FINDER</h1>
         <nav class="navbar">
-            <a href="index.html">Home</a>
+            <a href="{% url 'add_championship'  %}">Home</a>
             <a href="encJogador.html">Encontre Jogadores</a>
             <a href="championships.html">Campeonatos</a>
-            <a href="create-championship.html">Crie um Campeonato</a>
+            <a href="add_championship.html">Crie um Campeonato</a>
             <a href="noticias.html">Notícias</a>
             <a href="contato.html">Contato</a>
         </nav>
@@ -33,7 +34,7 @@
                 <p>Jogue Campeonatos</p>
             </a>
             <!-- Section 1 -->
-            <a href="create-championship.html" class="section-item">
+            <a href="add_championship.html" class="section-item">
                 <span class="section-label">Section 1</span>
                 <img src="images/crie-campeonato.png" alt="Crie um Campeonato">
                 <p>Crie um campeonato</p>

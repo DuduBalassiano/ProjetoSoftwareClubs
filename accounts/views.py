@@ -63,7 +63,7 @@ def add_player(request):
 
     return render(request, 'add_player.html', {'form': form})
 
-def add_championship(request):
+'''def add_championship(request):
     if request.method == 'POST':
         form = ChampionshipForm(request.POST)
         if form.is_valid():
@@ -71,4 +71,7 @@ def add_championship(request):
             return redirect('home')  # Substitua 'home' pela URL da página inicial ou lista de campeonatos
     else:
         form = ChampionshipForm()
-    return render(request, 'add_championship.html', {'form': form})
+    return render(request, 'add_championship.html', {'form': form})'''
+
+def add_championship(request):
+    return render(request, 'add_championship.html')
