@@ -8,7 +8,7 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('https://www.pcclean.io/wp-content/gallery/ronaldo-hd-wallpapers/Cristiano-Ronaldo-50.jpg'); /* Substitua pela sua imagem */
@@ -31,6 +31,7 @@
   
   /* Conteúdo */
   .sections-grid {
+    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -53,8 +54,68 @@
   
   /* Rodapé */
   footer {
-    background-color: var(--cor-principal);
+    background-color: rgba(76, 175, 80, 0.8); /* Verde transparente */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1px;
+    font-size: 12px; /* Texto um pouco menor */
   }
+
+  /* Efeitos de hover nos ícones */
+.section-item img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.section-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Centralizando o título e os links */
+header h1 {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  font-size: 16px; /* Texto um pouco menor */
+}
+
+
+
+/* Ajustando o tamanho das imagens e criando um fundo uniforme */
+.section-item img {
+  max-width: 100%;
+  height: 150px; /* Define uma altura fixa para as imagens */
+  object-fit: contain; /* Mantém as proporções da imagem e preenche todo o espaço disponível */
+  background-color: black; /* Fundo branco para todas as imagens */
+  border-radius: 10px; /* Arredonda as bordas das imagens */
+}
+
+/* Estilizando os textos dos links */
+.section-label, .section-item p {
+  color: black;
+  font-family: 'Roboto', sans-serif; /* Substitua por sua fonte preferida */
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Aplicando a nova fonte para todo o site */
+.sections-grid, .section-item, footer {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ... (restante do seu CSS) */
+
+.section-item-container {
+  position: relative;
+  transition: transform 0.2s ease-in-out; /* Aplicando a transição ao contêiner */
+}
+
+.section-item-container:hover {
+  transform: scale(1.1);
+}
+
+
